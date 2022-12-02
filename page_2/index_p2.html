@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <link rel="stylesheet" href="../style.css">
+    <title>AAD WS 2022/2023</title>
+</head>
+<body>
+    <div class="main-body">
+		<nav id="navbar">
+			<header id="nav-header">Ferdinand Ruff</header>
+            <a href="/" class="nav-link">
+				HOME</a>
+			<a href="../page_1" class="nav-link">
+				Portfolio page 1</a>
+			<a href="./" class="nav-link">
+				Portfolio page 2</a>
+		</nav>
+
+        <main id="main-doc">
+            <h1>
+                ALLEY OF TREES
+            </h1>
+            <section class="main-section" id="description">
+                <header>
+                    Project Description
+                </header>
+                <p>
+                    The second assignment was supposed to introduce us to the concept of functions and, in particular, recursive functions. The provided script from the lecture created a star-shaped structure by using a recursive function.
+                    It was very difficult to understand the concept of recursion with the given example, since the end of the recursion is not natural (one example I looked at was calculating mathematical Faculties, where the natural end is reached at 1) but rather a pre-assigned term. 
+                    Once I grasped the concept, I thought about an implementation that would use the provided recursive function in a sensible way. 
+                    In my work I focused on understanding the recursive part of the script, and I spent most of my time setting up a second recursive system to complement the existing one. I tried to increase the complexity of the code but still keep it readable and well commented by using smaller functions. For the user, the second assignment is more of an experience and less interactive, because my focus was on the backend part of the code.
+                </p>
+                <img src="../images/design_iterations_2.jpg" alt="Design Iterations">
+            </section>
+
+            <section class="main-section" id="algorithm">
+                <header>
+                    Algorithm
+                </header>
+                <p>
+                    My code visualizes a valley of trees, with trees to each side of the user becoming bigger and bigger. By scrolling in and out, a sense of walking can be simulated. 
+                    To understand the recursive part of the code, I started with changing the Characters used in the generate() method. This was the part that had confused me the most, since the seemingly random set of strings later meant something, but didn’t yet at the point of implementation. I changed the generation string to consist of lowercase letters a-f, and modified all following methods as well. I tried to simplify the code by combining several cases into one, where the output has a similar structure. 
+                    To implement the alleyway of multiple trees, I set up my axiom systems inside a loop, where I had predefined how many trees should be built and how many bifurcations the first tree should have. 
+                    Lastly, I implemented a second set of functions to place the trees on the sphere. I did this using a method that generates a string of symbols recursively using a helper function. In a next step, the recursively created string can be used after passing it to use_coordinates(), which returns two integers to serve as coordinates for tree placement.<br>
+                </p>
+                <img src="../images/flowchart_2.png" alt="Algorithm FlowChart">
+            </section>
+
+            <section class="main-section" id="web-app">
+                <header>
+                    Web App
+                </header>
+                <body>
+                    <p>
+                    Scroll back and forth to simulate the feeling of walking through an alley of trees.</p>
+                    <iframe class="responsive-iframe" src="../webapps/webapp_2.html"></iframe>
+                </body>
+                <p>
+                    <br>
+                </p>
+            </section>
+            
+        </main>
+    </div>
+</body>
+</html>

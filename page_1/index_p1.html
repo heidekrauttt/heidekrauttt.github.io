@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <link rel="stylesheet" href="../style.css">
+    <title>AAD WS 2022/2023</title> 
+</head>
+<body>
+    <div class="main-body">
+		<nav id="navbar">
+			<header id="nav-header">Ferdinand Ruff</header>
+            <a href="/" class="nav-link">
+				HOME</a>
+			<a href="./" class="nav-link">
+				Portfolio Page 1</a>
+			<a href="../page_2" class="nav-link">
+				Portfolio Page 2</a>
+		</nav>
+
+        <main id="main-doc">
+            <h1>
+            GEOMETRY CLASS
+            </h1>
+            <section class="main-section" id="description">
+                <header>
+                    Project Description
+                </header>
+                <p>
+                    The first assignment was supposed to familiarize us with the Three.js package as well as website creation with html. Since this was my first interaction with Python, the main focus of this assignment was to understand the code and the documentation of the Three.js package. 
+                    My work shows a threedimensional plane on which a user defined number of geometries can be extended in two dimensions. As Geometries I chose the CylinderGeometry as well as the CapsuleGeometry. The two chosen objects take different variables than the provided BoxGeometry in the code from the lecture, therefore I saw the learning opportunity in choosing objects with a different structure. 
+                    In this assignment I learned to use nested for-loops to increase dimensionality. I also learned to look up and apply functions of the Geometries, and I was able to debug with the help of the tutors to solve a material issue. I concentrated on the basics of programming, tried to keep the code clean, and kept the additional functionalities minimal.
+                </p>
+                <img src="../images/design_iterations_1.jpg" alt="Design Iterations">
+            </section>
+
+            <section class="main-section" id="algorithm">
+                <header>
+                    Algorithm
+                </header>
+                <p>
+                    I implemented the two variations in such a way that we can modify the code very easily to output either Cylinders or Capsules. With further investigation, this step can be implemented in the GUI in the future, however for this assignment the code solution seemed sufficient. 
+                    For the geometry creation I used the provided script as a foundation, and implemented a version that has some more functionality and some structural changes. The most important feature that I added was the additional option to extend the geometries not only to one dimension, but to two, thus making it a plane of geometries. With this feature, I wanted to show the user the complexity and dimensionality of my geometries. To make it user friendly, I added the parameter handles to the GUI. The user can swipe the handles to increase or decrease the number of geometries in both dimensions. 
+                    To achieve this additional complexity, a second for-loop was implemented inside the existing for-loop. By cloning the geometry from the first for-loop and translating it y times in the inner loop, as many copies as needed can be placed onto the sphere. The same functionality was also added to the function update_geometry (_cylinders or _capsules) to account for the changing user input.
+                </p>
+                <img src="../images/flowchart_1.png" alt="Algorithm FlowChart Assignment 1">
+
+            </section>
+
+            <section class="main-section" id="web-app">
+                <header>
+                    Web App
+                </header>
+                <body>
+                    <p>
+                    Toggle the parameters to decrease or increase the amount of Objects in two dimensions. The simulation should show you how the objects
+                    behave in an environment on their own and in a group. Additional parameters can be changed to modify size and rotation of the objects.</p>
+                    <iframe class="responsive-iframe" src="../webapps/webapp_1.html"></iframe>
+                    <p>
+                        <br>
+                    </p>
+                </body>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
